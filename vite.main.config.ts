@@ -1,4 +1,5 @@
 import react from "@vitejs/plugin-react";
+import path from "node:path";
 import type { ConfigEnv, UserConfig } from "vite";
 import { defineConfig, mergeConfig } from "vite";
 import {
@@ -10,8 +11,6 @@ import {
 
 // https://vitejs.dev/config
 export default defineConfig((env) => {
-	console.log(env);
-
 	const forgeEnv = env as ConfigEnv<"build">;
 	const { forgeConfigSelf } = forgeEnv;
 	const define = getBuildDefine(forgeEnv);
@@ -29,6 +28,7 @@ export default defineConfig((env) => {
 		plugins: [react(), pluginHotRestart("restart")],
 		define,
 		resolve: {
+			alias: { "@/": path.resolve(__dirname, "./src/") },
 			// Load the Node.js entry.
 			mainFields: ["module", "jsnext:main", "jsnext"],
 		},
