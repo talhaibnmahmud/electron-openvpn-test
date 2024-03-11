@@ -26,6 +26,9 @@
  * ```
  */
 
-import './index.css';
+import "./index.css";
+import "./root";
 
-console.log('👋 This message is being logged by "renderer.ts", included via Vite');
+console.log(
+	'👋 This message is being logged by "renderer.ts", included via Vite'
+);
