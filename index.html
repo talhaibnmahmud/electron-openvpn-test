@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
-
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-    <script type="module" src="/src/renderer.ts"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Hello World!</title>
+	</head>
+	<body
+		class="w-full bg-gradient-to-b from-blue-600 to-indigo-600 bg-no-repeat bg-cover min-h-screen grid place-content-center"
+	>
+		<div class="grid">
+			<h1 class="text-white text-3xl text-center font-semibold">
+				💖 Hello World!
+			</h1>
+			<p class="text-gray-200">Welcome to your Electron application.</p>
+			<button
+				id="btn"
+				class="bg-white text-black font-semibold px-4 py-2 rounded-full mt-4"
+			>
+				Click me
+			</button>
+		</div>
+		<script type="module" src="/src/renderer.ts"></script>
+	</body>
 </html>
